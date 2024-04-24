@@ -1,0 +1,15 @@
+
+<sly data-sly-use.model="com.training.aem.core.models.ImageOrVideoModel">
+
+    <div data-sly-test="${model.assetType}">
+        <p>Asset Type: ${model.assetType}</p>
+        <div data-sly-test="${model.assetType == 'image'}">
+            <img src="${model.image @ extension='jpg'}">
+        </div>
+    </div>
+
+    <div data-sly-test="${!model.assetType}">
+        <p>No content type specified.</p>
+    </div>
+
+</sly>
